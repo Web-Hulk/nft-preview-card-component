@@ -18,11 +18,15 @@ body {
   color: $white;
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
+
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
-  margin: 9.5rem auto;
-  max-width: 330px;
+  max-width: 320px;
   width: 100%;
   padding: 22px;
   border-radius: 14px;
@@ -43,6 +47,7 @@ body {
 
     .card__section-img {
       width: 100%;
+      display: block;
     }
 
     .card__overlay {

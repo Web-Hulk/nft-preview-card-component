@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap');
+
+$white: #ffffff;
+$cyan: #00fff7;
+$darkBlueMainBackground: #0d192b;
+$darkBlueCardBackground: #14253d;
+$border: #2f415b;
+$softBlue: #8bacda;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  background-color: $darkBlueMainBackground;
+  color: $white;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+}
+
+.card {
+  margin: 9.5rem auto;
+  max-width: 330px;
+  width: 100%;
+  padding: 22px;
+  border-radius: 14px;
+  background-color: $darkBlueCardBackground;
+
+  .card__section--images {
+    position: relative;
+    overflow: hidden;
+    border-radius: 7px;
+
+    &:hover .card__overlay {
+      opacity: .5;
+    }
+
+    &:hover .card__overlay--img {
+      opacity: 1;
+    }
+
+    .card__section-img {
+      width: 100%;
+    }
+
+    .card__overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      cursor: pointer;
+      transition: .3s ease;
+      background-color: $cyan;
+    }
+
+    .card__overlay--img {
+      color: $white;
+      font-size: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+      transition: .3s ease;
+    }
+  }
+
+  .header {
+    margin: 1.4rem 0 0.75rem;
+    font-size: 1.4rem;
+
+    &:hover {
+      color: $cyan;
+    }
+  }
+
+  .description {
+    color: $softBlue;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid $border;
+
+    .info--item {
+      display: flex;
+      align-items: center;
+
+      .item--img {
+        margin-right: 6px;
+      }
+
+      .item--value {
+        color: $cyan;
+      }
+
+      .item--time {
+        color: $softBlue;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    padding-top: 18px;
+
+    .footer__img {
+      width: 100%;
+      height: auto;
+      max-width: 34px;
+      border: 1px solid $white;
+      border-radius: 100%;
+    }
+
+    .footer__paragraph {
+      margin-left: 14px;
+      color: $softBlue;
+    }
+
+    .footer__span {
+      color: $white;
+
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+}
